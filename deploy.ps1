@@ -9,6 +9,7 @@ $resourceGroupName = "rg-tag-creator"
 
 $subs | ForEach-Object {
 
+    $subId = $_.Subscription
     # Switch to subscription
     Write-Host "Deploying to subscription: $subId"
     Set-AzContext -SubscriptionId $subId
