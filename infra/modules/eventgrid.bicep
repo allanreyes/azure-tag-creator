@@ -17,7 +17,7 @@ resource sysSubscription 'Microsoft.EventGrid/systemTopics/eventSubscriptions@20
     destination: {
       endpointType: 'AzureFunction'
       properties: {
-        resourceId: resourceId('Microsoft.Web/sites/functions', functionAppName, 'ResourceCreated')
+        resourceId: resourceId('Microsoft.Web/sites/functions', functionAppName, 'CreateTags')
       }
     }
     filter: {
